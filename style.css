@@ -1,9 +1,19 @@
 @import url("styles/header.css");
+@import url("styles/banner.css");
+@import url("styles/carrosel.css");
 :root{
     --cor-de-fundo:#043109;
     --branco: #ffffff;
-
+    --roxo:rgb(117, 5, 173);
+    --amarelo: rgb(178, 155, 5);
+    --roxodegrade: linear-gradient(rgb(218, 103, 244), rgb(25, 1, 41));
+    --fontep:"poppins";
+    --fontes:"Josefin Sans";
+    --preto: black;
 }
 body{
     background-color: var(--cor-de-fundo);
+    font-family: var(--fontep);
+    font-size: 16px;
+    font-weight: 400px;
 }

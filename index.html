@@ -6,19 +6,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>responsividade</title>
     <link rel="stylesheet" href="reset.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="cab">
         <div class="conteiner">
-            <span class="cab_menuh"></span>
+            <input type="checkbox" id="menu" class="conteiner_botao">
+            <label for="menu">
+            <span class="cab_menuh conteiner_img"></span>
+            </label>
+            <ul class="lista-menu">
+                <li class="lista-menu_tit">categorias:</li>
+                <li class="lista-menu_item"> <a href="#" class="lista-menu_link"> aventura</a></li>
+                <li class="lista-menu_item"> <a href="#" class="lista-menu_link"> biografia</a></li>
+                <li class="lista-menu_item"> <a href="#" class="lista-menu_link"> ficção cientifica</a></li>
+                <li class="lista-menu_item"> <a href="#" class="lista-menu_link"> romance</a></li>
+                <li class="lista-menu_item"> <a href="#" class="lista-menu_link"> vestibular</a></li>
+            </ul>
             <a href="#"><img class="conteiner_img" src="img/Logo.svg" alt="logotipo"></a>
+            <h1 class="conteiner__tit">Biblioteca<b class="conteiner__tit--negrito">Start</b></h1>
         </div>
+        <ul class="opcoes">
+            <input type="checkbox" id="opcoes-menu" class="opcoes__botao">
+            <label for="opcoes-menu">
+                <li class="opcoes__item">categoria</li>
+            </label>
+            <ul class="lista-menu">
+                <li class="lista-menu_item"> <a href="#" class="lista-menu_link"> aventura</a></li>
+                <li class="lista-menu_item"> <a href="#" class="lista-menu_link"> biografia</a></li>
+                <li class="lista-menu_item"> <a href="#" class="lista-menu_link"> ficção cientifica</a></li>
+                <li class="lista-menu_item"> <a href="#" class="lista-menu_link"> romance</a></li>
+                <li class="lista-menu_item"> <a href="#" class="lista-menu_link"> vestibular</a></li>
+            </ul>
+            <li class="opcoes__item"><a href="#" class="opcoes__link">Favoritos</a></li>
+            <li class="opcoes__item"><a href="#" class="opcoes__link">Meus Emprestimos</a></li>
+        </ul>
         <div class="conteiner">
-            <a href="#"><img class="conteiner_img" src="img/Favoritos.svg" alt="meus favoritos"></a>
+            <a href="#"><img class="conteiner_img conteiner__imagem--transparente" src="img/Favoritos.svg" alt="meus favoritos"></a>
             <a href="#"><img class="conteiner_img" src="img/Emprestimos.svg" alt="meus emprestimos"></a>
             <a href="#"><img class="conteiner_img" src="img/Usuario.svg" alt="meu perfil"></a>
         </div>
     </header>
+    <section class="banner">
+        <h2 class="banner_tit">ja sabe por onde começar</h2>
+        <p class="banner_texto">encontre em nossa estante o que precisa para seu desenvolvimento</p>
+        <input type="search" class="banner_pesquisa" placeholder="qual sera sua proxima leitura">
+    </section>
+    <section class="carrossel">
+        <h2 class="carrossel__titulo">últimos lançamento</h2>
+
+        <!-- Slider main container -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide"><img src="img/mulheres_que_correm_como_os_lobos.svg" alt=""></div>
+            <div class="swiper-slide"><img src="img/torto_arado.svg" alt=""></div>
+            <div class="swiper-slide"><img src="img/pequeno_mural_antirracista.svg" alt=""></div>
+            <div class="swiper-slide"><img src="img/o_alquimista.svg" alt=""></div>
+            <div class="swiper-slide"><img src="img/o_pica_pau_amarelo.svg" alt=""></div>
+            <div class="swiper-slide"><img src="img/o_seminarista.svg" alt=""></div>
+            ...
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+        
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
+        </div>
+
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js">
+        
+    </script>
+    <script>
+        const swiper = new Swiper('.swiper',{
+            spaceBetween: 10,
+            slidesPerView: 3,
+            pagination:{
+                el: '.swiper-pagination',
+                type: 'bulets,'
+            }
+        });
+    </script>
+
 </body>
 </html>
